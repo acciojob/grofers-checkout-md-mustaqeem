@@ -4,7 +4,11 @@ document.body.appendChild(getSumBtn);
 
 const getSum = () => {
 
-  // Correct class name
+  // Prevent multiple total rows
+  if (document.getElementById("ans")) {
+    return;
+  }
+
   const prices = document.querySelectorAll(".price");
 
   let total = 0;
@@ -16,6 +20,7 @@ const getSum = () => {
   });
 
   const tr = document.createElement("tr");
+  tr.id = "ans";
 
   const td = document.createElement("td");
 
