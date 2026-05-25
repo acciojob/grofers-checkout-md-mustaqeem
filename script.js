@@ -3,9 +3,9 @@ getSumBtn.append("Get Total Price");
 document.body.appendChild(getSumBtn);
 
 const getSum = () => {
-//Add your code here
-  
-  const prices = document.querySelectorAll(".prices");
+
+  // Correct class name
+  const prices = document.querySelectorAll(".price");
 
   let total = 0;
 
